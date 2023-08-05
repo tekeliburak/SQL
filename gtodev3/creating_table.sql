@@ -1,0 +1,29 @@
+-- İstenilen tabloların oluşturulması.
+
+CREATE TABLE country(
+id INTEGER PRIMARY KEY,
+name VARCHAR(100) NOT NULL);
+
+CREATE TABLE league(
+id INTEGER PRIMARY KEY,
+name VARCHAR(100) NOT NULL,
+id_country INTEGER NOT NULL);
+
+CREATE TABLE team(
+id INTEGER PRIMARY KEY,
+name VARCHAR(100) NOT NULL,
+id_league INTEGER NOT NULL,
+foundation_year INTEGER NOT NULL,
+scored_goal INTEGER NOT NULL,
+conceded_goal INTEGER NOT NULL,
+points INTEGER NOT NULL,
+level INTEGER NOT NULL);
+
+CREATE TABLE player(
+id INTEGER PRIMARY KEY,
+name VARCHAR(100) NOT NULL,
+surname VARCHAR(100) NOT NULL,
+id_team INTEGER NOT NULL,
+id_country INTEGER NOT NULL,
+scored_goal INTEGER NOT NULL
+);
